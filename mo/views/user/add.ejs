@@ -1,0 +1,23 @@
+<%- include ../layouts/header.ejs %>
+
+
+
+<form action = "/users/add" method="post" name=form1>
+  <table>
+   <tr>
+       <td> Name </td>
+       <td><input type ="text" name="name" id="name"/> value="<%= name %>"</td>
+   </tr>
+   <tr>
+       <td> Image </td>
+       <td><input type ="text" name="imagelink" id="imagelink" value="<%= imagelink %>"/></td>
+   </tr>
+   
+  </table>
+</form>
+
+
+
+
+
+<%- include ../layouts/footer.ejs %>

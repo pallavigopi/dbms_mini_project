@@ -1,0 +1,31 @@
+<%- include ../layouts/header.ejs %>
+
+
+
+  
+
+ <% if(data){ %>
+
+     <% data.forEach(function(user){ %>
+
+        
+
+            
+            <a href="/home"><img src="<%= user.imagelink %>" >
+        
+        
+    <% }) %>
+  <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include ../layouts/footer.ejs %>
