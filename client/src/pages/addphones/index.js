@@ -11,6 +11,10 @@ export default class Addphone extends Component {
         }
     }
 
+    handleDelete(event){  
+
+    }
+
     handleSubmit(event){
 
       event.preventDefault();
@@ -58,14 +62,13 @@ export default class Addphone extends Component {
           radio:document.getElementById('radio').value,
           usb:document.getElementById('usb').value,
           sensors:document.getElementById('sensors').value,
-          messsaging:document.getElementById('messsaging').value,
+          messaging:document.getElementById('messaging').value,
           browser:document.getElementById('browser').value,
           batterybasic:document.getElementById('batterybasic').value,
           talktime:document.getElementById('talktime').value,
           musicplay:document.getElementById('musicplay').value,
           colors:document.getElementById('colors').value,
           price:document.getElementById('price').value,
-          otherbody:document.getElementById('otherbody').value
 
 
 
@@ -137,13 +140,13 @@ export default class Addphone extends Component {
         <p>Radio <input id="radio" type="text" placeholder="Radio" /></p>
         <p>USB <input id="usb" type="text" placeholder="USB" /></p>
         <p>Sensors <input id="sensors" type="text" placeholder="Sensors" /></p>
-        <p>Messsaging <input id="messsaging" type="text" placeholder="Messsaging" /></p>
+        <p>Messaging <input id="messaging" type="text" placeholder="Messsaging" /></p>
         <p>Browser <input id="browser" type="text" placeholder="Browser" /></p>
         <p>Battery <input id="batterybasic" type="text" placeholder="Battery" /></p>
         <p>Talktime <input id="talktime" type="text" placeholder="Talktime" /></p>
         <p>Music Play <input id="musicplay" type="text" placeholder="Music Play" /></p>
         <p>Colors <input id="colors" type="text" placeholder="Colors" /></p>
-        <p>Price <input id="price" type="text" placeholder="Price" /></p>
+        <p>Price <input id="price" type="text" placeholder="Price" required /></p>
 
 
 
@@ -151,7 +154,7 @@ export default class Addphone extends Component {
 
         <input type="submit" value="Submit"/>
       </form>
-      
+      <br/>
       
       </div>
     );

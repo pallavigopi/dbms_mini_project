@@ -35,6 +35,8 @@ app.get('/api/phones/',(req , res)=>{
 
     res.json(phones);
     }); 
+
+  
     app.get('/api/phones/all/', function(req, res){
         let sql = `SELECT * FROM phones`;
         connection.query(sql, (error, results, fields) => {
@@ -71,6 +73,7 @@ app.post('/addphones',function(req,res){
 
 
     console.log(results);
+    console.log(sql);
     res.json(results);
 
   });
