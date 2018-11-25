@@ -51,28 +51,44 @@ class Comment extends Component {
       <div className="comments">
       <h2>User Reviews</h2>
         <div className="comment-box">
-          <div><h3>@rohanajith</h3></div>
-          <div>29th October 2018</div>  
-          <div>Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
+            <div className="comment-info">
+                <div className="comment-avtar">
+                    <img alt="default-commenter-image" src={require("../../img/user-default.png")}/>
+                </div>
+                <div className="comment-details">
+                    <h3>@rohanajith</h3>
+                    <div>29th October 2018</div>  
+                </div>
+            </div>
+          <div className="comment-body">
+              Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
         </div>
+        
+        
         <div className="comment-box">
-          <div><h3>@rohanajith</h3></div>
-          <div>29th October 2018</div>  
-          <div>Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
+            <div className="comment-info">
+                <div className="comment-avtar">
+                    <img alt="default-commenter-image" src={require("../../img/user-default.png")}/>
+                </div>
+                <div className="comment-details">
+                    <h3>@rohanajith</h3>
+                    <div>29th October 2018</div>  
+                </div>
+            </div>
+          <div className="comment-body">
+              Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
         </div>
-        <div className="comment-box">
-          <div><h3>@rohanajith</h3></div>
-          <div>29th October 2018</div>  
-          <div>Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
-        </div>
+        <div className="add-comment">
+        <h2>Add Your Own Review</h2>
         <form onSubmit={this.handleSubmit}>
         <div className="inputs">
                 <input id="uname" type="text" placeholder="Username"/>
-                <input id="email" type="email" placeholder="email" />
+                <input id="email" type="email" placeholder="Email" />
                 <input id="comment" type="text" placeholder="Write Review here" />
             <input type="submit" value="Submit" />
         </div>
         </form>
+        </div>
       </div>
     );
   }

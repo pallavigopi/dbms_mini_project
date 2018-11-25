@@ -1,17 +1,57 @@
 .comments{
     margin:2.5vh 5vw 2.5vh 5vw;
     display: grid;
-    grid-row-gap: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
 }
 .comment-box h3{
-    margin: 0px 10px;
-    padding: 0px 10px;
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
-.comment-box{
+.comment-box {
     padding: 1vw;
     margin: 0vh 2.5vw;
     text-align: left;
-    background-color: whitesmoke;
-    border: 1px solid #cccccc;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-bottom: 1px solid #cccccc;
+}
+
+.comment-avtar img{
+    height: 50px;
+}
+.comment-body{
+    padding-top: 20px;
+    font-size: larger;
+}
+
+.add-comment {
+    background-color: white;
+    padding: 5vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 1vh 2.5vw;
+}
+
+.add-comment input[type=text], [type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-comment input[type=submit] {
+    width:10vh;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-comment input[type=submit]:hover {
+    background-color: #45a049;
 }
