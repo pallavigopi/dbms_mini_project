@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from './styles.css';
+import './styles.css';
+import Comment from '../../components/comment';
 export default class PhoneDetails extends Component {
     constructor(){
         super();
@@ -19,6 +20,7 @@ export default class PhoneDetails extends Component {
             grid.push(<div><h2>Brand:{this.state.phones[i].brand}<br/></h2>
                            <h2>Name:{this.state.phones[i].name}<br/></h2>
                            <h2>Weight:{this.state.phones[i].weight}<br/></h2>
+                           <h2>Network: {this.state.phones[i].network}<br/></h2>
                            <h2>Announced:{this.state.phones[i].announced}<br/></h2>
                            <h2>Status:{this.state.phones[i].status}<br/></h2>
                            <h2>Dimensions:{this.state.phones[i].dimensions}<br/></h2>
@@ -32,7 +34,11 @@ export default class PhoneDetails extends Component {
                            <h2>Protection:{this.state.phones[i].protection}<br/></h2>
                            <h2>OS:{this.state.phones[i].os}<br/></h2>
                            <h2>Chipset:{this.state.phones[i].chipset}<br/></h2>
-                           <h2>GPU:{this.state.phones[i].gpu}<br/></h2>
+                           <h2>CPU: {this.state.phones[i].cpu}<br/></h2>
+                           <h2>GPU: {this.state.phones[i].gpu}<br/></h2>
+                           <h2>Card Slot: {this.state.phones[i].cardslot}<br/></h2>
+                           <h2>RAM:{this.state.phones[i].ram}<br/></h2>
+                           <h2>ROM:{this.state.phones[i].rom}<br/></h2>
                            <h2>Main Camera Type:{this.state.phones[i].maincamtype}<br/></h2>
                            <h2>Main Camera Features:{this.state.phones[i].maincamfeatures}<br/></h2>
                            <h2>Main Camera Video:{this.state.phones[i].maincamvid}<br/></h2>
@@ -57,14 +63,19 @@ export default class PhoneDetails extends Component {
                            <h2>Musicplay:{this.state.phones[i].musicplay}<br/></h2>
                            <h2>Colors:{this.state.phones[i].colors}<br/></h2>
                            <h2>Price:{this.state.phones[i].price}<br/></h2>
+                           <h2>Other Display Features:{this.state.phones[i].otherdisplayfeatures}<br/></h2>
+                           <h2>Other Body Features:{this.state.phones[i].otherbodyfeatures}<br/></h2>
+                           <h2>Other Camera Features:{this.state.phones[i].othercamerafeatures}<br/></h2>
+                           <h2>Other Features:{this.state.phones[i].otherfeatures}<br/></h2>
+
                            <img src="this.state.phones[i].imagelink1"/>
                       </div>);
 
     return (
-      <div className="phone-deatils">
-        <h1>Phone Details</h1>
-        {grid}
-      </div>
+        <div className="phone-details">
+            {grid}
+        </div>
     );
   }
 }
+

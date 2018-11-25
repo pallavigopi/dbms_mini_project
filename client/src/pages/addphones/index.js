@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './style.css';
 import { Route, Link } from 'react-router-dom'
-export default class Addphone extends Component {
+export default class Addphones extends Component {
     constructor(){
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -11,9 +11,7 @@ export default class Addphone extends Component {
         }
     }
 
-    handleDelete(event){  
-
-    }
+    
 
     handleSubmit(event){
 
@@ -31,6 +29,7 @@ export default class Addphone extends Component {
           name:document.getElementById('name').value,
           imglink1:document.getElementById('imglink1').value,
           imglink2:document.getElementById('imglink2').value,
+          network:document.getElementById('network').value,
           announced:document.getElementById('announced').value,
           status:document.getElementById('status').value,
           dimensions:document.getElementById('dimensions').value,
@@ -44,7 +43,11 @@ export default class Addphone extends Component {
           protection:document.getElementById('protection').value,
           os:document.getElementById('os').value,
           chipset:document.getElementById('chipset').value,
+          cpu:document.getElementById('cpu').value,
           gpu:document.getElementById('gpu').value,
+          cardslot:document.getElementById('cardslot').value,
+          ram:document.getElementById('ram').value,
+          rom:document.getElementById('rom').value,
           maincamtype:document.getElementById('maincamtype').value,
           maincamfeatures:document.getElementById('maincamfeatures').value,
           maincamvid:document.getElementById('maincamvid').value,
@@ -69,6 +72,12 @@ export default class Addphone extends Component {
           musicplay:document.getElementById('musicplay').value,
           colors:document.getElementById('colors').value,
           price:document.getElementById('price').value,
+          otherdisplayfeatures:document.getElementById('otherbodyfeatures').value,
+          otherbodyfeatures:document.getElementById('otherdisplayfeatures').value,
+          othercamerafeatures:document.getElementById('othercamerafeatures').value,
+          otherfeatures:document.getElementById('otherfeatures').value
+
+         
 
 
 
@@ -99,6 +108,7 @@ export default class Addphone extends Component {
         <p>Name <input id="name" type="text" placeholder="Phone Name" /></p>
         <p>imagelink1 <input id="imglink1" type="text" placeholder="Image Link" /></p>
         <p>imagelink2 <input id="imglink2" type="text" placeholder="Image Link" /></p>
+        <p>Network <input id="network" type="text" placeholder="Network" /></p>
         <p>Announced <input id="announced" type="text" placeholder="Announced" /></p>
         <p>Status <input id="status" type="text" placeholder="Status" /></p>
         <p>Dimensions <input id="dimensions" type="text" placeholder="Dimensions" /></p>
@@ -110,7 +120,7 @@ export default class Addphone extends Component {
         <p>Display Resolution <input id="dispres" type="text" placeholder="Display Resolution" /></p>
         <div>
          <label>Multitouch 
-           <select id="ismultitouch" name="type">
+           <select id="ismultitouch">
 
                     <option disabled> Choose option </option>
                     <option value="Yes">Yes</option>
@@ -122,7 +132,20 @@ export default class Addphone extends Component {
         <p>Protection <input id="protection" type="text" placeholder="Protection" /></p>
         <p>Operating System <input id="os" type="text" placeholder="Operating System" /></p>
         <p>Chipset <input id="chipset" type="text" placeholder="Chipset" /></p>
+        <p>CPU <input id="cpu" type="text" placeholder="CPU" /></p>
         <p>GPU <input id="gpu" type="text" placeholder="GPU" /></p>
+        <div>
+          <label>Card Slot</label>
+            <select id="cardslot" >
+              
+              <option disabled>Choose option</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              
+            </select>
+        </div>
+        <p>RAM <input id="ram" type="text" placeholder="RAM"/></p>
+        <p>ROM <input id="rom" type="text" placeholder="ROM"/></p>
         <p>Main Camera Type <input id="maincamtype" type="text" placeholder="Main Camera Type" /></p>
         <p>Main Camera Features <input id="maincamfeatures" type="text" placeholder="Main Camera Features" /></p>
         <p>Main Camera Video <input id="maincamvid" type="text" placeholder="Main Camera Video" /></p>
@@ -130,13 +153,46 @@ export default class Addphone extends Component {
         <p>Selfie Camera Features <input id="selfcamfeatures" type="text" placeholder="Selfie Camera Features" /></p>
         <p>Selfie Camera Video<input id="selfcamvid" type="text" placeholder="Selfie Camera Video" /></p>
         <p>Alert Type <input id="alerttype" type="text" placeholder="Alert Type" /></p>
-        <p>LoudSpeakers <input id="loudspeakers" type="text" placeholder="LoudSpeakers" /></p>
-        <p>Jack <input id="jack" type="text" placeholder="Jack" /></p>
+        <div>
+          <label>LoudSpeakers  </label> 
+          <select id="loudspeakers">
+
+             <option disabled>Choose option</option>
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
+
+          </select>
+          
+        </div>
+        <br/>
+        <div>
+          <label>Jack  </label> 
+          <select id="jack">
+
+             <option disabled>Choose option</option>
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
+
+
+          </select>
+          
+        </div>
         <p>Sound Additional Features <input id="soundmisc" type="text" placeholder="Sound Additional Features" /></p>
         <p>WLAN <input id="wlan" type="text" placeholder="WLAN" /></p>
         <p>Bluetooth <input id="bluetooth" type="text" placeholder="Bluetooth" /></p>
         <p>GPS <input id="gps" type="text" placeholder="GPS" /></p>
-        <p>NFC <input id="nfc" type="text" placeholder="NFC" /></p>
+        <div>
+          <label>NFC  </label> 
+          <select id="nfc">
+
+             <option disabled>Choose option</option>
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
+
+          </select>
+          
+        </div>
+
         <p>Radio <input id="radio" type="text" placeholder="Radio" /></p>
         <p>USB <input id="usb" type="text" placeholder="USB" /></p>
         <p>Sensors <input id="sensors" type="text" placeholder="Sensors" /></p>
@@ -148,13 +204,20 @@ export default class Addphone extends Component {
         <p>Colors <input id="colors" type="text" placeholder="Colors" /></p>
         <p>Price <input id="price" type="text" placeholder="Price" required /></p>
 
+        <p>Other Body Features<input id="otherbodyfeatures" type="text" placeholder="Other Body Features"/></p>
+        <p>Other Display Features<input id="otherdisplayfeatures" type="text" placeholder="Other Display Features"/></p>
+        <p>Other Camera Features<input id="othercamerafeatures" type="text" placeholder="Other Camera Features"/></p>
+        <p>Other Features<input id="otherfeatures" type="text" placeholder="Other Features"/></p>
+
+       
+
 
 
 
 
         <input type="submit" value="Submit"/>
       </form>
-      <br/>
+      
       
       </div>
     );

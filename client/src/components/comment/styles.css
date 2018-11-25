@@ -1,0 +1,17 @@
+.comments{
+    margin:2.5vh 5vw 2.5vh 5vw;
+    display: grid;
+    grid-row-gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+.comment-box h3{
+    margin: 0px 10px;
+    padding: 0px 10px;
+}
+.comment-box{
+    padding: 1vw;
+    margin: 0vh 2.5vw;
+    text-align: left;
+    background-color: whitesmoke;
+    border: 1px solid #cccccc;
+}

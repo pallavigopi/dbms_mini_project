@@ -3,3 +3,69 @@ h2{
 	color:green;
 	margin-right:  80%;
 }
+.phone-image img{
+    height: 30vh;
+    width: auto;
+    padding-top: 5vh;
+}
+.phone-image{
+    display: grid;
+    grid-template-columns: 3fr 6fr; 
+    padding-bottom: 5vh; 
+}
+.big-text{
+    font-size: 5rem;
+    padding-top: 5vh;
+    text-align: left;
+}
+.phone-details-grid{
+    background-color: #fdfdfd;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    
+}
+.phone-details-inner{
+    color: #3c3838;
+}
+
+.subpoint{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #585252;
+}
+#phone-details-col-1, #phone-details-col-2{
+    border-top:  1px solid #cccccc; 
+    border-left:  1px solid #cccccc; 
+    border-right:  1px solid #cccccc; 
+
+}
+.col-1-content, .col-2-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    border-bottom:1px solid #cccccc; 
+}
+.details-main{
+border-right: 1px solid #cccccc;
+color: tomato;
+font-size: 1.5rem;
+font-weight: bold;
+padding: 2px;
+}
+
+.details-sub{
+    padding: 2px;
+    background-color:white; 
+}
+
+.details-sub2{
+    border-left: 1px solid #cccccc;
+    text-align: left;
+    padding: 2px;
+    padding-left: 4px;
+}
+.left-text{
+    text-align: left;
+}
