@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { Redirect } from 'react-router-dom';
 import { withRouter } from "react-router";
 
 class Comment extends Component {
@@ -17,7 +16,7 @@ class Comment extends Component {
       event.preventDefault();
       var data= new FormData(document.getElementById('login'));
       console.log(data);
-      fetch('http://localhost:5000/addcomment', {
+      fetch('http://localhost:5000/api/addcomment/', {
              method: 'POST',
              datatype:'json',
              headers: {
@@ -26,7 +25,7 @@ class Comment extends Component {
          },
              body:  JSON.stringify({
                  uname: document.getElementById('uname').value,
-                 password: document.getElementById('email').value,
+                 email: document.getElementById('cemail').value,
                  comment: document.getElementById('comment').value,
                  id: this.props.id
              })
@@ -42,48 +41,42 @@ class Comment extends Component {
  }
 
     componentDidMount(){
-       fetch('/api/comments/'+this.props.id)
+       fetch('http://localhost:5000/api/comments/'+this.props.id,{
+           method:'GET',
+       })
        .then(res => res.json())
        .then(comments => this.setState({comments},() => console.log(comments)));
     }
     render() {
+        var grid=[];
+        for( var i in this.state.comments){
+         grid.push(
+            <div className="comment-box">
+            <div className="comment-info">
+                <div className="comment-avtar">
+                    <img alt="default-commenter-image" src={require("../../img/user-default.png")}/>
+                </div>
+                <div className="comment-details">
+                    <h3>@{this.state.comments[i].cuser}</h3>
+                    <div>{this.state.comments[i].cdate}</div>  
+                </div>
+            </div>
+          <div className="comment-body">
+              {this.state.comments[i].comment}
+        </div>
+        </div>
+         );
+        }
     return (
       <div className="comments">
       <h2>User Reviews</h2>
-        <div className="comment-box">
-            <div className="comment-info">
-                <div className="comment-avtar">
-                    <img alt="default-commenter-image" src={require("../../img/user-default.png")}/>
-                </div>
-                <div className="comment-details">
-                    <h3>@rohanajith</h3>
-                    <div>29th October 2018</div>  
-                </div>
-            </div>
-          <div className="comment-body">
-              Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
-        </div>
-        
-        
-        <div className="comment-box">
-            <div className="comment-info">
-                <div className="comment-avtar">
-                    <img alt="default-commenter-image" src={require("../../img/user-default.png")}/>
-                </div>
-                <div className="comment-details">
-                    <h3>@rohanajith</h3>
-                    <div>29th October 2018</div>  
-                </div>
-            </div>
-          <div className="comment-body">
-              Very disappointed by Samsung this time. It is nearly cost around OnePlus 6T. OnePlus 6T >>>> Galaxy A9. No better SOC. No IP Rating. 4 cameras is just hype at this price range. LG G7 Thinq, LG V30+ are other much better option.... </div>
-        </div>
+        {grid}
         <div className="add-comment">
         <h2>Add Your Own Review</h2>
         <form onSubmit={this.handleSubmit}>
         <div className="inputs">
                 <input id="uname" type="text" placeholder="Username"/>
-                <input id="email" type="email" placeholder="Email" />
+                <input id="cemail" type="email" placeholder="Email" />
                 <input id="comment" type="text" placeholder="Write Review here" />
             <input type="submit" value="Submit" />
         </div>

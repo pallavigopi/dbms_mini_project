@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 export default class Home extends Component {
     constructor(){
         super();
         this.state={
             phones: []
         }
+        this.handleLogout=this.handleLogout.bind(this);
+    }
+    handleLogout(){
+        localStorage.setItem('loggedin','false');
+        localStorage.setItem('usertoken','');
     }
     componentDidMount(){
        fetch('/api/phones/all')
@@ -14,8 +19,22 @@ export default class Home extends Component {
        .then(phones => this.setState({phones},() => console.log(phones)));
     }
     render() {
+        var grid=[];
+        if(localStorage.getItem('loggedin')=='true')
+          grid.push(
+            <div className="login-logout">
+              <Link to='/' onClick={this.handleLogout}>LOGOUT</Link>
+            </div>
+          );
+        else
+        grid.push(
+          <div className="login-logout">
+            <Link to='/login'>LOGIN</Link>
+          </div>
+        );
     return (
       <div className="home">
+        {grid}
         <div className="main-overlay">
         <h1>PhoneGeeks</h1>
         <input placeholder="Search..." required="required" autoFocus="" className="search-bar-landing"/>

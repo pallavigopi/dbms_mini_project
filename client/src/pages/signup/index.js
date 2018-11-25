@@ -58,7 +58,7 @@ handleSubmit(event){
      //var self=this;
      var data= new FormData(document.getElementById('signup'));
      console.log(data);
-     fetch('http://localhost:5000/signup/', {
+     fetch('http://localhost:5000/api/signup/', {
             method: 'POST',
             headers: {
             'Accept': 'application/json',
@@ -95,7 +95,7 @@ render(){
         <form className={classes.form}>
         <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="username">Username</InputLabel>
-            <Input id="username" name="username" autoComplete="Username" autoFocus />
+            <Input id="username" name="username" autoComplete="Username" autoFocus/>
           </FormControl>
           <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="email">Email Address</InputLabel>

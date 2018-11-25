@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
 import PhoneDetails from './pages/phone-details';
 import SignUp from './pages/signup';
 import Login from './pages/login';
 import Addphones from './pages/addphones';
+import LoginMessage from './pages/loginMessage';
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
             <Route path="/signup" exact component={SignUp}/>
             <Route path="/login" exact component={Login}/>
             <Route path="/addphones" exact component = {Addphones}/>
-            <Redirect to="/" />
+            <Route path="/loginmessage" exact component ={LoginMessage}/>
           </Switch>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Input from '@material-ui/core/Input';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import { withRouter } from 'react-router-dom';
 
 const styles = theme =>({
   main: {
@@ -49,17 +50,14 @@ class Addphone extends Component {
     }
 
     handleSubmit(event){
-
-      event.preventDefault();
-      fetch('http://localhost:5000/addphones/', { 
+      fetch('http://localhost:5000/api/addphones/', { 
         method: 'POST',
         headers: {
           'Accept': 'application/json',
-          "Content-Type":"application/json"
+          "Content-Type":"application/json",
+          "Authorization":"Bearer "+localStorage.getItem('usertoken')
         },
         body:JSON.stringify({
-
-          
           brand:document.getElementById('brand').value,
           name:document.getElementById('name').value,
           imglink1:document.getElementById('imglink1').value,
@@ -111,12 +109,12 @@ class Addphone extends Component {
        throw new Error ('something went wrong with your fetch');
      }
    }).then(function(body){
-
      console.log(body);
+   }).catch(function(error){
+     console.log(error);
    });
-
-
-    }
+   this.props.history.push('/');
+}
    
 
     render() {
@@ -402,4 +400,4 @@ class Addphone extends Component {
   }
 }
 
-export default withStyles(styles)(Addphone);
+export default withRouter(withStyles(styles)(Addphone));
