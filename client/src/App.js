@@ -7,6 +7,7 @@ import SignUp from './pages/signup';
 import Login from './pages/login';
 import Addphones from './pages/addphones';
 import LoginMessage from './pages/loginMessage';
+import AllPhones from './pages/allphones';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path="/login" exact component={Login}/>
             <Route path="/addphones" exact component = {Addphones}/>
             <Route path="/loginmessage" exact component ={LoginMessage}/>
+            <Route path="/deletephones" exact component={AllPhones}/>
           </Switch>
         </div>
       </div>

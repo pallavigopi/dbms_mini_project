@@ -75,53 +75,257 @@ export default class PhoneDetails extends Component {
                             <td className="spec_ttle">Status</td>
                             <td className="spec_des">{this.state.phones[i].status}</td>
                         </tr>
-
+                   
                         </tbody>
                     </table>
                 </div>
-
-
                 <div className="spec_box">
                     <div className="specsLeft">
-                    General
+                    Body
                     </div>  
                     <table className="spec_table">
                         <tbody>
                         <tr>
-                            <td className="spec_ttle">Launch Date</td>
-                            <td className="spec_des">October 11, 2018 (Official)</td>
+                            <td className="spec_ttle">Dimensions</td>
+                            <td className="spec_des">{this.state.phones[i].dimensions}</td>
                         </tr>
                         <tr>
-                            <td className="spec_ttle">Launch Date</td>
-                            <td className="spec_des">October 11, 2018 (Official)</td>
+                            <td className="spec_ttle">Weight</td>
+                            <td className="spec_des">{this.state.phones[i].weight}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Build</td>
+                            <td className="spec_des">{this.state.phones[i].build}</td>
+                        </tr>
+                            <tr>
+                            <td className="spec_ttle">SIM</td>
+                            <td className="spec_des">{this.state.phones[i].sim}</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-
                 <div className="spec_box">
                     <div className="specsLeft">
-                    General
+                    Display
                     </div>  
                     <table className="spec_table">
                         <tbody>
                         <tr>
-                            <td className="spec_ttle">Launch Date</td>
-                            <td className="spec_des">October 11, 2018 (Official)</td>
+                            <td className="spec_ttle">Type</td>
+                            <td className="spec_des">{this.state.phones[i].disptype}</td>
                         </tr>
                         <tr>
-                            <td className="spec_ttle">Launch Date</td>
-                            <td className="spec_des">October 11, 2018 (Official)</td>
+                            <td className="spec_ttle">Size</td>
+                            <td className="spec_des">{this.state.phones[i].dispsize}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Resolution</td>
+                            <td className="spec_des">{this.state.phones[i].dispres}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Multitouch</td>
+                            <td className="spec_des">{this.state.phones[i].ismultitouch}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Protection</td>
+                            <td className="spec_des">{this.state.phones[i].protection}</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-
-
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Platform
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">OS</td>
+                            <td className="spec_des">{this.state.phones[i].os}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Chipset</td>
+                            <td className="spec_des">{this.state.phones[i].chipset}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">GPU</td>
+                            <td className="spec_des">{this.state.phones[i].gpu}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Main Camera
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">Type</td>
+                            <td className="spec_des">{this.state.phones[i].maincamtype}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Features</td>
+                            <td className="spec_des">{this.state.phones[i].maincamfeatures}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Video</td>
+                            <td className="spec_des">{this.state.phones[i].maincamvid}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Selfie Camera
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">Type</td>
+                            <td className="spec_des">{this.state.phones[i].selfcamtype}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Features</td>
+                            <td className="spec_des">{this.state.phones[i].selfcamfeatures}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Video</td>
+                            <td className="spec_des">{this.state.phones[i].selfcamvid}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Sound
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">Alert Type</td>
+                            <td className="spec_des">{this.state.phones[i].alerttype}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Loudspeaker</td>
+                            <td className="spec_des">{this.state.phones[i].loudspeakers}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Jack</td>
+                            <td className="spec_des">{this.state.phones[i].jack}</td>
+                        </tr>
+                            <tr>
+                            <td className="spec_ttle">Additional Features</td>
+                            <td className="spec_des">{this.state.phones[i].soundmisc}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+                  <div className="spec_box">
+                    <div className="specsLeft">
+                    Comms
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">WLAN</td>
+                            <td className="spec_des">{this.state.phones[i].wlan}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Bluetooth</td>
+                            <td className="spec_des">{this.state.phones[i].bluetooth}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">GPS</td>
+                            <td className="spec_des">{this.state.phones[i].gps}</td>
+                        </tr>
+                            <tr>
+                            <td className="spec_ttle">NFC</td>
+                            <td className="spec_des">{this.state.phones[i].nfc}</td>
+                        </tr>
+                              <tr>
+                            <td className="spec_ttle">Radio</td>
+                            <td className="spec_des">{this.state.phones[i].radio}</td>
+                        </tr>
+                              <tr>
+                            <td className="spec_ttle">USB</td>
+                            <td className="spec_des">{this.state.phones[i].usb}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Features
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">Sensors</td>
+                            <td className="spec_des">{this.state.phones[i].sensors}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Messaging</td>
+                            <td className="spec_des">{this.state.phones[i].messaging}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Browser</td>
+                            <td className="spec_des">{this.state.phones[i].browser}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Battery
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle"></td>
+                            <td className="spec_des">{this.state.phones[i].batterybasic}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Talk time</td>
+                            <td className="spec_des">{this.state.phones[i].talktime}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Music Play</td>
+                            <td className="spec_des">{this.state.phones[i].musicplay}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="spec_box">
+                    <div className="specsLeft">
+                    Misc
+                    </div>  
+                    <table className="spec_table">
+                        <tbody>
+                        <tr>
+                            <td className="spec_ttle">Colors</td>
+                            <td className="spec_des">{this.state.phones[i].colors}</td>
+                        </tr>
+                        <tr>
+                            <td className="spec_ttle">Price</td>
+                            <td className="spec_des">{this.state.phones[i].price}</td>
+                        </tr>
+                           <tr>
+                            <td className="spec_ttle">Video</td>
+                            <td className="spec_des">{this.state.phones[i].selfcamvid}</td>
+                        </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
             </div>
             </div>
             </div>
-
             );
     return (
         <div className="phone-details">
@@ -131,4 +335,3 @@ export default class PhoneDetails extends Component {
     );
   }
 }
-

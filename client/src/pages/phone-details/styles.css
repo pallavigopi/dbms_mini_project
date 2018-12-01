@@ -80,7 +80,6 @@ text-align: center;
 .spec_box {
     width: 100%;
     display: inline-block;
-    border-bottom: solid 1px #e0e0e0;
     padding-bottom: 13px;
     margin-top: 20px;
 }

@@ -83,7 +83,7 @@ handleSubmit(event){
             }).catch(function(error){
                 console.log(error);
             });
-            window.setTimeout(()=>{this.props.history.push('/loginmessage')}, 100);
+            window.setTimeout(()=>{this.props.history.push('/loginmessage')}, 200);
             
 }
 

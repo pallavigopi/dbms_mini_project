@@ -56,6 +56,7 @@ ul{
     appearance: none;
     -webkit-appearance: none;
     border:none;
+    display:none;
  }
 
  .search-icon-landing{
@@ -70,6 +71,7 @@ ul{
     cursor: pointer;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    display: none;
  }
 
  .search-icon-landing img{
