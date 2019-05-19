@@ -1,0 +1,6 @@
+go to the mysql in terminal and type the foll
+
+CREATE USER 'newusername'@'localhost' IDENTIFIED BY 'password';
+GRANT USAGE ON *.* TO 'newusername'@'localhost' IDENTIFIED BY PASSWORD 'password'
+
+

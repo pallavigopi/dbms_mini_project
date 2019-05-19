@@ -1,0 +1,4 @@
+create database mobile
+
+create table phone(id int(20) NOT NULL,name varchar(50) NOT NULL auto_increment,imagelink varchar(255) NOT NULL auto_increment, PRIMARY KEY(id))
+
